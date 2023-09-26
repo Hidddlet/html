@@ -1,0 +1,25 @@
+// colors ----------------------------------
+$primary: #1B1B1B;
+$primaryLighter: #232323;
+$primaryLight: #3A3A3A;
+$secondary: #FFFFFF;
+$secondaryDarker: #CCCCCC;
+$secondaryDark: #999999;
+$accent: #FA6E37;
+// fonts -----------------------------------
+$font: Raleway, sans-serif;
+$h1: 68pt;
+$h2: 44pt;
+$h3: 30pt;
+$h4: 19pt;
+
+*{
+    font-family: $font;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap{
+    margin: 0 auto;
+    width: 1440px;
+}
