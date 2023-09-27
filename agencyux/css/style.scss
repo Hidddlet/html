@@ -1,0 +1,552 @@
+// colors -------------------------------------------------
+
+$primary: #1B1B1B;
+$primaryLighter: #232323;
+$primaryLight: #3A3A3A;
+$secondary: #FFFFFF;
+$secondaryDarker: #CCCCCC;
+$secondaryDark: #999999;
+$accent: #FA6E37;
+$accentAlt: #F47746;
+$accentDarker: #E2612E;
+
+// fonts --------------------------------------------------
+
+$primaryFont: Raleway, sans-serif;
+$bold: 700;
+$semiBold: 600;
+$medium: 500;
+$regular: 400;
+
+// general stuff-------------------------------------------
+
+*{
+    margin: 0;
+    padding: 0;
+    font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+}
+
+body{
+    background-color: $primary;
+    font-family: $primaryFont;
+    color: $secondary;
+    letter-spacing: 2px;
+}
+
+.wrap{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.block:not(:first-child){
+    padding: 70px 0;
+}
+
+h1{
+    font-size: 68px;
+    font-weight: $bold;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 44px;
+    font-weight: $medium;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: $medium;
+}
+
+h4{
+    font-size: 19px;
+    font-weight: $semiBold;
+}
+
+p{
+    font-size: 17px;
+    font-weight: $regular;
+}
+
+.btn{
+    color: $secondary;
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    font: $medium 19px $primaryFont;
+    padding: 15px 40px;
+    align-items: center;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    letter-spacing: 2px;
+}
+
+.btn:hover{
+    background-color: $accentAlt;
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: $accentDarker;
+}
+
+
+// details----------------------------------------------------
+
+.colored{
+    color: $accent;
+}
+
+.small{
+    font-size: 14px;
+    font-weight: $regular;
+    letter-spacing: 1px;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+    color: $accent;
+    
+}
+
+.strikethrough h4{
+    color: $secondary;
+}
+// header-----------------------------------------------------
+
+header{
+    background-color: $primaryLighter;
+    padding: 50px 0;
+}
+
+header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+}
+
+.header-nav__list{
+    display: flex;
+    list-style-type: none
+}
+
+
+.header-nav__item:not(:last-child){
+    padding-right: 40px;
+}
+
+.header-nav__link{
+    text-decoration: none;
+    color: $secondary;
+}
+
+// main------------------------------------------------------
+
+.main{
+    padding-top: 50px;
+}
+
+.main__wrap{
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.main__container h1{
+    padding-bottom: 40px;
+}
+
+.main__desc{
+    width: 420px;
+    padding-left: 50px;
+}
+
+.main__img{
+    position: relative;
+}
+
+.main__arrow{
+    position: absolute;
+    top: -17%;
+    left: 88%;
+}
+
+.main__arrow:hover .main__arrow-circle2{
+    fill: $accentAlt;
+    transition: all 0.2s;
+}
+
+.main__arrow:active .main__arrow-circle2{
+    fill: $accentDarker;
+    transition: all 0.2s;
+}
+
+.main__arrow:active .main__arrow-circle{
+    stroke: $accentDarker;
+    transition: all 0.2s;
+}
+
+// about us------------------------------------------------------
+
+.about__container{
+    display: flex;
+    width: 1250px;
+    align-items: end;
+    padding-bottom: 70px;
+}
+
+.about__container div{
+    margin-left: 50px;
+}
+
+.about__cards{
+    display: flex;
+    justify-content: space-between;
+}
+.about__card{
+    background-color: $primaryLighter;
+    border: $primaryLight solid 1px;
+    border-radius: 10px;
+    width: 32%;
+    box-sizing: border-box;
+}
+
+.about__card p{
+    color: $secondaryDarker;
+}
+
+.about__card h3{
+    margin-bottom: 30px;
+}
+
+.about__text{
+    margin: 30px 50px 30px 30px;
+    
+}
+
+.about__image{
+    display: none;
+}
+
+// prices------------------------------------------------------
+
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price__block{
+    width: 49%;
+    box-sizing: border-box;
+    background-color: $primaryLighter;
+    border: $primaryLight solid 1px;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price__block p{
+    color: $secondaryDarker;
+}
+
+.price__block h2{
+    margin: 40px 0 20px;
+}
+
+.price__block h4{
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+// slider------------------------------------------------------
+
+.cases__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.cases__container h2{
+    width: 60%;
+}
+
+.cases__arrows{
+    display: flex;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: $primaryLighter;
+}
+
+.swiper-container{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.swiper-container h3{
+    margin-bottom: 30px;
+}
+
+.cases__list{
+    align-items: center;
+    list-style-position: inside;
+}
+
+.cases__list-item:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.cases__list-item::marker{
+    color: $accent;
+}
+
+.swiper-button-next{
+    margin-left: 50px;
+}
+
+.swiper-arrow-pr, .swiper-arrow-nx{
+    transition: all 0.2s ease-in-out;
+}
+
+.swiper-button-prev:hover .swiper-arrow-pr{
+    fill: $accentAlt;
+}
+
+.swiper-button-next:hover .swiper-arrow-nx{
+    fill: $accentAlt;
+}
+
+.swiper-button-next:focus .swiper-arrow-nx{
+    fill: $accentDarker;
+}
+
+.swiper-button-prev:focus .swiper-arrow-pr{
+    fill: $accentDarker;
+}
+
+// form------------------------------------------------------
+
+.form{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.form p{
+    color: $secondaryDarker;
+    line-height: 25px;
+}
+
+.form__wrap h2{
+    margin-bottom: 30px;
+    padding-right: 50px;
+}
+
+form{
+    width: 65%;
+}
+
+form p{
+   margin-top: 10px; 
+}
+
+.form__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.form__input{
+    background:none;
+    border: $secondaryDarker solid 1px;
+    box-sizing: border-box;
+
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 15px;
+    margin-top: 30px;
+    width: 48%;
+    color: $secondary;
+}
+
+.form__input:focus::placeholder{
+    color: transparent;
+}
+
+.form__input-wide{
+    width: 100%;
+}
+
+// clients-------------------------------------------------------------
+
+.clients h2{
+    margin-bottom: 70px;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+$animationSpeed: 40s;
+
+.slider {
+	background: transparent;
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	
+	&::before,
+	&::after {
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+	}
+
+    .slide{
+        margin-left: 50px;
+    }
+}
+
+// accordion (qa)------------------------------------------------------
+
+.qa h2{
+    margin-bottom: 60px;
+}
+
+.qa__accordion{
+    margin-bottom: 30px;
+}
+
+.qa__question {
+    background-color: $primaryLighter;
+    color: $secondary;
+    cursor: pointer;
+    font-weight: $medium;
+    font-size: 30px;
+    width: 100%;
+    padding: 38px 30px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+.qa__question:not(:last-child){
+    margin-bottom: 0px;
+}
+  
+  .active, .qa__question:hover {
+    color: $accent;
+}
+
+.qa__answer {
+    background-color: $primaryLighter;
+    display: none;
+    padding: 0 30px 30px;
+    color: $secondaryDarker;
+    overflow: hidden;
+}
+
+// footer ------------------------------------------------------
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    height: 120px;
+}
+
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__icons button{
+    width: 43px;
+    height: 43px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $secondaryDarker;
+}
+
+.footer__icons button:hover{
+    background-color: $accentAlt;
+}
+
+.footer__icons button:active{
+    background-color: $accentDarker;
+}
+
+.footer__icons button:hover .footer__icon{
+    fill: $secondary;
+}
+
+
+.footer__bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 53px;
+}
+
+.footer__bottom p, a{
+    color: $secondaryDark;
+}
+
+.footer__bottom a:hover{
+    color: $secondary;
+    cursor: pointer;
+}
+
+
+.footer-nav__list{
+    list-style: none;
+    display: flex;
+}
+
+.footer-nav__link{
+    text-decoration: none;
+}
+
+.footer-nav__item:not(:last-child){
+    margin-right: 10px;
+}
+
+.footer-nav__item:hover a{
+    color: $secondary;
+}
