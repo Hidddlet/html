@@ -573,6 +573,18 @@ header .header-nav__link:hover {
 .qa .qa__accordion {
   margin-bottom: 30px;
 }
+.qa .qa__accordion button {
+  position: relative;
+}
+.qa .qa__accordion svg {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  transition: all 0.2s ease;
+}
+.qa .qa__accordion path {
+  transition: all 0.2s ease;
+}
 .qa .qa__accordion .qa__question {
   background-color: #232323;
   color: #FFFFFF;
@@ -600,6 +612,12 @@ header .header-nav__link:hover {
 }
 .qa .qa__accordion .active, .qa .qa__accordion .qa__question:hover {
   color: #FA6E37;
+}
+.qa .qa__accordion .active, .qa .qa__accordion .qa__question:hover path {
+  fill: #FA6E37;
+}
+.qa .qa__accordion .active svg {
+  transform: rotate(-90deg);
 }
 
 @media (max-width: 375px) {
