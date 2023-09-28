@@ -1,0 +1,57 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+.clients h2{
+    margin-bottom: 70px;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-300px * 6))}
+}
+
+$animationSpeed: 40s;
+
+.slider {
+	background: transparent;
+	height: 100px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+	}
+
+    .slide{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width:375px){
+
+	.clients h2{
+		margin-bottom: 40px;
+	}
+	
+	@keyframes scroll {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(calc(-130px * 6))}
+	}
+	
+	$animationSpeed: 30s;
+	
+	.slider {
+		height: 40px;
+
+		.slide{
+			margin-left: 20px;
+
+			img{
+				height: 46px;
+				width: 110px;
+			}
+		}
+	}
+}

@@ -1,0 +1,118 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+.cases__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    h2{
+        width: 60%;
+    }
+
+    .cases__arrows{
+        display: flex;
+
+        .swiper-arrow-pr, .swiper-arrow-nx{
+            transition: all 0.2s ease-in-out;
+        }        
+
+        .swiper-button-prev{
+
+            &:hover .swiper-arrow-pr{
+                fill: $accentAlt;
+            }
+
+            &:focus .swiper-arrow-pr{
+                fill: $accentDarker;
+            }
+        }
+
+        .swiper-button-next{
+            margin-left: 50px;
+
+            &:hover .swiper-arrow-nx{
+                fill: $accentAlt;
+            }
+
+            &:focus .swiper-arrow-nx{
+                fill: $accentDarker;
+            }
+        }
+    }
+    
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: $primaryLighter;
+    border-radius: 10px;
+    
+
+    .swiper-container{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        h3{
+            margin-bottom: 30px; 
+        }
+
+        .cases__list{
+            align-items: center;
+            list-style-position: inside;
+        
+            &-item::marker{
+                color: $accent;
+            }
+        
+            &-item:not(:last-child){
+                margin-bottom: 15px;
+            }
+        }        
+    }
+}
+
+
+@media (max-width:375px){
+
+    .cases__container{
+        margin-bottom: 40px;
+    
+        h2{
+            width: 100%;
+        }
+    
+        .cases__arrows{
+            display: none;
+        }
+    }
+    
+    .swiper-slide{
+        flex-direction: column-reverse;
+
+        img{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }    
+    
+        .swiper-container{
+
+            h3{
+                text-transform: uppercase;
+                font-size: 23px; 
+            }
+
+            .cases__list{
+                margin-bottom: 30px;
+            }        
+        }
+    }
+}
+
+
+

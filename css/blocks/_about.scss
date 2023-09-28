@@ -1,0 +1,81 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+.about__container{
+    display: flex;
+    width: 93%;
+    align-items: end;
+    padding-bottom: 70px;
+
+    div{
+        margin-left: 50px;
+    }
+}
+
+.about__cards{
+    display: flex;
+    justify-content: space-between;
+
+    .about__card{
+        background-color: $primaryLighter;
+        border: $primaryLight solid 1px;
+        border-radius: 10px;
+        width: 32%;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+    
+        p{
+            color: $secondaryDarker;
+        }
+    
+        h3{
+            margin-bottom: 30px;
+        }
+
+        .about__text{
+            margin: 30px 50px 30px 30px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .about__image{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+@media (max-width:375px) {
+
+    .about__container{
+        flex-direction: column;
+
+        h2{
+            margin-bottom: 40px;
+        }
+    
+        div{
+            margin-left: 0px;
+        }
+    }
+    
+    .about__cards{
+        flex-direction: column;
+    
+        .about__card{
+            width: 100%; 
+            
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+
+            .about__text{
+                margin: 30px 50px 30px 30px;
+            }
+        }
+    }
+}
+
+

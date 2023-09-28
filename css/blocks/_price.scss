@@ -1,0 +1,60 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+.price{
+    display: flex;
+    justify-content: space-between;
+
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .price__block{
+        width: 49%;
+        box-sizing: border-box;
+        background-color: $primaryLighter;
+        border: $primaryLight solid 1px;
+        border-radius: 10px;
+        padding: 30px;
+
+        p{
+            color: $secondaryDarker;
+        }
+        
+        h2{
+            margin: 40px 0 20px;
+        }
+
+        h4{
+            text-transform: uppercase;
+            margin-top: 50px;
+        }
+    }
+    
+}
+
+@media (max-width:375px){
+
+    .price{
+        flex-direction: column;
+
+        &__wrap{
+            align-items: center;
+        }
+    
+        .price__block{
+            width: 100%;
+            padding: 30px 30px 45px 30px;
+
+            &:not(:last-child){
+                margin-bottom: 34px;
+            }
+    
+            h4{
+                margin-top: 0px;
+            }
+        }
+        
+    }
+}

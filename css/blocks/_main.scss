@@ -1,0 +1,82 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+.main{
+    padding-top: 50px;
+    
+    &__wrap{
+        padding-bottom: 50px;
+    }
+
+    &__container{
+        display: flex;
+
+        h1{
+            padding-bottom: 40px;
+        }
+    }
+
+    &__desc{
+        max-width: 420px;
+        padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding-bottom: 50px;
+    }
+
+    &__img{
+        position: relative;
+    }
+
+    &__arrow{
+        position: absolute;
+        top: -17%;
+        cursor: pointer;
+        left: 88%;
+
+        &:hover .main__arrow-circle2{
+            fill: $accentAlt;
+            transition: all 0.2s;
+        }
+
+        &:active .main__arrow-circle2{
+            fill: $accentDarker;
+            transition: all 0.2s;
+        }
+
+        &:active .main__arrow-circle{
+            stroke: $accentDarker;
+            transition: all 0.2s;
+        }        
+    }
+}
+
+@media (max-width:375px){
+
+    .main{
+
+        &__container{
+            flex-direction: column;
+        }
+
+        &__desc{
+            padding-left: 0px;
+            max-width: 340px;
+            color: $secondaryDarker;
+            padding-bottom: 30px;
+        }
+
+        &__arrow{
+            top: -14%;
+            left: 75%;
+            width: 64px;
+            height: 64px;
+        }
+
+        &__img{
+            position: relative;
+        }
+    
+    }
+}

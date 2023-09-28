@@ -1,0 +1,84 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+.form{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    p{
+        color: $secondaryDarker;
+        line-height: 25px;
+    }
+
+    &__wrap h2{
+        margin-bottom: 30px;
+        padding-right: 50px;
+    }
+
+    form{
+        width: 65%;
+
+        p{
+            margin-top: 10px; 
+        }
+    }
+}
+
+.form__container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.form__input{
+    background:none;
+    border: $secondaryDarker solid 1px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 15px;
+    margin-top: 30px;
+    width: 48%;
+    color: $secondary;
+
+    &:focus::placeholder{
+        color: transparent;
+    }   
+    
+    &-wide{
+        width: 100%;
+    }
+}
+
+@media (max-width:375px){
+    
+.form{
+    flex-direction: column;
+
+    p{
+        line-height: 15px;
+        margin-bottom: 20px; 
+    }
+
+    &__wrap h2{
+        padding-right: 30px;
+    }
+
+    form{
+        width: 100%;
+    }
+}
+
+.form__container{
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form__input{
+    margin-top: 10px;
+    width: 100%;
+}
+
+}
+

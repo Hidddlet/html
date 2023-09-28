@@ -1,0 +1,46 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+header{
+    background-color: $primaryLighter;
+    padding: 40px 0;
+
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 19px;
+    }
+
+    .header-nav{
+
+        &__list{
+            display: flex;
+            list-style-type: none
+        }
+
+        &__item:not(:last-child){
+            padding-right: 40px;
+        }
+
+        &__link{
+            text-decoration: none;
+            color: $secondary;
+            transition: all 0.2s ease;
+
+            &:hover{
+                color: $accent;
+            }
+        }
+    }
+
+}
+
+@media (max-width:375px){
+
+    header{
+        display: none;
+    }
+        
+    
+}

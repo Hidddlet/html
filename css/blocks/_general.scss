@@ -1,0 +1,190 @@
+@import "_colors.scss"; 
+@import "_fonts.scss"; 
+
+*{
+    margin: 0;
+    padding: 0;
+    font-variant-numeric: lining-nums;
+    -moz-font-feature-settings:"lnum" 1; 
+    -moz-font-feature-settings:"lnum=1"; 
+    -ms-font-feature-settings:"lnum" 1; 
+    -o-font-feature-settings:"lnum" 1; 
+    -webkit-font-feature-settings:"lnum" 1; 
+    font-feature-settings:"lnum" 1;
+    
+}
+
+body{
+    background-color: $primary;
+    font-family: $primaryFont;
+    color: $secondary;
+    letter-spacing: 2px;
+}
+
+.wrap{
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.block:not(:first-child){
+    padding: 70px 0;
+}
+
+h1{
+    font-size: 68px;
+    font-weight: $bold;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 44px;
+    font-weight: $medium;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: $medium;
+}
+
+h4{
+    font-size: 19px;
+    font-weight: $semiBold;
+}
+
+p{
+    font-size: 17px;
+    font-weight: $regular;
+}
+
+.btn{
+    color: $secondary;
+    background-color: $accent;
+    border: none;
+    border-radius: 5px;
+    font: $medium 19px $primaryFont;
+    padding: 15px 40px;
+    align-items: center;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    letter-spacing: 2px;
+
+    &:hover{
+        background-color: $accentAlt;
+        cursor: pointer;
+    }
+
+    &:active{
+        background-color: $accentDarker;
+    }
+}
+
+// details----------------------------------------------------
+
+.colored{
+    color: $accent;
+}
+
+.small{
+    font-size: 14px;
+    font-weight: $regular;
+    letter-spacing: 1px;
+}
+
+.mob{
+    display: none;
+}
+
+.web{
+    display: block;
+}
+
+.strikethrough{
+    text-decoration: line-through;
+    color: $accent;
+
+    h4{
+        color: $secondary;
+    }
+}
+
+// ----------------------------------------------------------------------------
+// mobile----------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+
+@media (max-width:375px) {
+
+    body{
+        background-color: $primary;
+        font-family: $primaryFont;
+        color: $secondary;
+        letter-spacing: 1px;
+        width: 375px;
+    }
+
+    .block:not(:first-child){
+        padding: 40px 0;
+    }    
+    
+    .wrap{
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    h1{
+        font-size: 28px;
+        font-weight: $semiBold;
+        text-transform: uppercase;
+    }
+    
+    h2{
+        font-size: 25px;
+        font-weight: $medium;
+    }
+
+    h3{
+        font-size: 17px;
+        font-weight: $medium;
+    }
+    
+    h4{
+        font-size: 14px;
+        font-weight: $semiBold;
+    }
+    
+    p{
+        font-size: 14px;
+        font-weight: $regular;
+        color: $secondaryDarker;
+    }
+
+    .small{
+        font-size: 7px;
+        font-weight: $regular;
+    }
+    
+    .btn{
+        color: $secondary;
+        background-color: $accent;
+        border: none;
+        border-radius: 5px;
+        font: $medium 17px $primaryFont;
+        padding: 15px 40px;
+        align-items: center;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        letter-spacing: 1px;
+    }
+    
+    .mob{
+        display: block;
+    }
+
+    .web{
+        display: none;
+    }
+}
