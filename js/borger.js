@@ -1,18 +1,6 @@
-var acc = document.getElementsByClassName("header__icons");
-var i;
+var menu = document.querySelector('.js-menu-button')
+var idk = document.querySelector('.js-header')
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active1");
-
-    /* Toggle between hiding and showing the active panel */
-    var nav__func = this.nextElementSibling;
-    if (nav__func.style.left === "-100%") {
-        nav__func.style.left = "0";
-    } else {
-        nav__func.style.left = "-100%";
-    }
-  });
-}
+menu.addEventListener("click", function() {
+  idk.classList.toggle('active1');
+});

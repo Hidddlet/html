@@ -200,6 +200,15 @@ header .header-nav__link:hover {
     align-items: start;
     font-size: 14px;
   }
+  header .header.active1 .header__icons-1 {
+    display: none;
+  }
+  header .header.active1 .header__icons-2 {
+    display: block;
+  }
+  header .header.active1 .header-nav {
+    left: 0%;
+  }
   header .header__info {
     text-align: center;
     width: 100%;
@@ -240,19 +249,12 @@ header .header-nav__link:hover {
   header .header__icons {
     position: absolute;
     align-items: end;
-    right: 0;
-    margin-right: 15px;
+    right: 15px;
     background-color: transparent;
     border: none;
   }
-  header .header__icons-1 {
+  header .header__icons-2 {
     display: none;
-  }
-  header .header .active1 .header__icons-2 {
-    display: none;
-  }
-  header .header .active1 .header__icons-1 {
-    display: block;
   }
 }
 .main {

@@ -56,6 +56,20 @@ header{
             align-items: start;
             font-size: 14px;
 
+            &.active1 .header__icons{
+                &-1{
+                    display: none;
+                }
+
+                &-2{
+                    display: block;
+                }
+            }
+
+            &.active1 .header-nav{
+                left: 0%;
+            }
+
             &__info{
                 text-align: center;
                 width: 100%;
@@ -99,31 +113,21 @@ header{
                 &__link{
                     text-transform: uppercase;
                 }
+
             }
 
             &__icons{
                 position: absolute;
                 align-items: end;
-                right: 0;
-                margin-right: 15px;
+                right: 15px;
                 background-color: transparent;
                 border: none;
 
-                &-1{
+                &-2{
                     display: none;
                 }
             }
-
-            .active1 .header__icons-2{
-                display: none;
-            }
-
-            .active1 .header__icons-1{
-                display: block;
-            }
         }
-    } 
-
-
+    }
 }
 
