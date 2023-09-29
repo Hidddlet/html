@@ -14,8 +14,9 @@
     <!-- -------------------------------header-------------------------------------------- -->
     <header class="block">
         <div class="wrap">
-            <a href="#" class="header__logo">  
-                <svg width="234" height="53" viewBox="0 0 234 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="header">
+                <a href="#">  
+                    <svg class="header__logo" width="234" height="53" viewBox="0 0 234 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M159.179 45.343C167.457 53.4758 180.887 53.3395 189.307 44.9881C190.465 43.8396 191.495 42.5663 192.373 41.1913C184.024 46.4289 172.981 45.4824 165.873 38.3164C163.542 35.9667 161.883 33.1995 160.894 30.2482L160.656 30.6383V40.7615H155.465C156.413 42.2404 157.521 43.6458 158.792 44.9531C158.824 44.9861 158.855 45.0186 158.888 45.0513C158.92 45.0842 158.951 45.1168 158.984 45.1492L158.986 45.1503C159.017 45.1825 159.049 45.2147 159.082 45.2464C159.114 45.2787 159.146 45.3109 159.179 45.343Z" fill="url(#paint0_linear_210_6)"/>
                     <path d="M153.094 16.8943C154.398 13.5336 156.412 10.386 159.137 7.68356C169.459 -2.55583 186.088 -2.55262 196.408 7.64186C188.129 -0.490936 174.699 -0.354644 166.281 7.99657C165.121 9.14513 164.092 10.4186 163.214 11.7937C162.694 12.6049 162.236 13.4422 161.835 14.2995L156.674 22.7706L153.094 16.8943Z" fill="url(#paint1_linear_210_6)"/>
                     <path d="M159.179 45.343C169.499 55.5375 186.127 55.5406 196.451 45.3012C197.685 44.0763 198.774 42.76 199.718 41.3737C197.918 41.3661 196.269 41.0711 194.817 40.4966C194.261 40.2768 193.734 40.0163 193.237 39.7161C192.97 40.2163 192.682 40.7085 192.373 41.1914C191.495 42.5665 190.465 43.8398 189.307 44.9882C180.887 53.3395 167.457 53.4758 159.179 45.343Z" fill="url(#paint2_linear_210_6)"/>
@@ -46,31 +47,41 @@
                     <stop offset="1" stop-color="#F95B23"/>
                     </linearGradient>
                     </defs>
+                    </svg>
+                </a>
+                <button class="mob header__icons"><svg class="header__icons-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2.00006" y="5" width="20" height="2" rx="1" fill="#D9D9D9"/>
+                    <rect x="2.00006" y="11" width="20" height="2" rx="1" fill="#D9D9D9"/>
+                    <rect x="2.00006" y="17" width="20" height="2" rx="1" fill="#D9D9D9"/>
                 </svg>
-            </a>
-            <nav class="header-nav">
-                <ul class="header-nav__list">
-                  <li class="header-nav__item">
-                    <a href="#" class="header-nav__link">О компании</a>
-                  </li>
-                  <li class="header-nav__item">
-                    <a href="#" class="header-nav__link">Услуги</a>
-                  </li>
-                  <li class="header-nav__item">
-                    <a href="#" class="header-nav__link">Продукты</a>
-                  </li>
-                  <li class="header-nav__item">
-                    <a href="#" class="header-nav__link">Кейсы</a>
-                  </li>
-                  <li class="header-nav__item">
-                    <a href="#" class="header-nav__link">Контакты</a>
-                  </li>
-                </ul>
-            </nav>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            <button class="btn"><span>+7 (995) 960-50-70</span></button>
+                <svg class="header__icons-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 20L4 4M20 4L4 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg></button>                       
+                <nav class="header-nav nav__func">
+                    <ul class="header-nav__list">
+                      <li class="header-nav__item">
+                        <a href="#" class="header-nav__link">О компании</a>
+                      </li>
+                      <li class="header-nav__item">
+                        <a href="#" class="header-nav__link">Услуги</a>
+                      </li>
+                      <li class="header-nav__item">
+                        <a href="#" class="header-nav__link">Продукты</a>
+                      </li>
+                      <li class="header-nav__item">
+                        <a href="#" class="header-nav__link">Кейсы</a>
+                      </li>
+                      <li class="header-nav__item">
+                        <a href="#" class="header-nav__link">Контакты</a>
+                      </li>
+                    </ul>
+                    <div class="header__info mob">
+                        <h4>+7 (995) 960-50-70</h4>
+                        <p>г. Владимир, ул. Горького, д.50, оф. 5-06</p>
+                    </div> 
+                </nav>
+                <button class="btn web"><span>+7 (995) 960-50-70</span></button>
+            </div>
         </div>
     </header>
     <div class="wrap">
@@ -200,7 +211,7 @@
                             </div>
                             <button class="btn">Оставить заявку</button>
                         </div>
-                        <img src="assets/img/image1.png">
+                        <img class="responsive" src="assets/img/image1.png">
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-container">
@@ -214,7 +225,7 @@
                             </div>
                             <button class="btn">Оставить заявку</button>
                         </div>
-                        <img src="assets/img/image1.png">
+                        <img class="responsive" src="assets/img/image1.png">
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-container">
@@ -228,7 +239,7 @@
                             </div>
                             <button class="btn">Оставить заявку</button>
                         </div>
-                        <img src="assets/img/image1.png">
+                        <img class="responsive" src="assets/img/image1.png">
                     </div>
                 </div>
                 
@@ -382,5 +393,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/accordion.js"></script>
+    <script src="js/borger.js"></script>
 </body>
 </html>

@@ -5,42 +5,112 @@ header{
     background-color: $primaryLighter;
     padding: 40px 0;
 
-    .wrap{
+    .header{
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 19px;
-    }
 
-    .header-nav{
+        &-nav{
 
-        &__list{
-            display: flex;
-            list-style-type: none
-        }
+            &__list{
+                display: flex;
+                list-style-type: none
+            }
+    
+            &__item{
+                padding-right: 40px;
 
-        &__item:not(:last-child){
-            padding-right: 40px;
-        }
-
-        &__link{
-            text-decoration: none;
-            color: $secondary;
-            transition: all 0.2s ease;
-
-            &:hover{
-                color: $accent;
+                &:last-child{
+                    padding-right: 0;
+                }
+            }
+    
+            &__link{
+                text-decoration: none;
+                color: $secondary;
+                transition: all 0.2s ease;
+    
+                &:hover{
+                    color: $accent;
+                }
             }
         }
     }
 
+    
+    
+
 }
 
-@media (max-width:375px){
+@media (max-width:576px){
+
 
     header{
-        display: none;
-    }
-        
-    
+        background-color: $primary;
+        position: relative;
+        padding: 20px 0;
+
+        .header{
+            flex-direction: column;
+            align-items: start;
+            font-size: 14px;
+
+            &__info{
+                text-align: center;
+                width: 100%;
+
+                h4{
+                    margin-bottom: 16px;
+                }
+            }
+
+            &__logo{
+                width: 108px;
+                height: 24px;
+            }
+
+            &-nav{
+                width: 100%;
+                display: none;
+
+                &__list{
+                    flex-direction: column;
+                    padding: 20px 0 30px;
+                }
+
+                &__item{
+                    margin: auto;
+                    padding-right: 0;
+                    padding: 10px 0;
+                }
+
+                &__link{
+                    text-transform: uppercase;
+                }
+            }
+
+            &__icons{
+                position: absolute;
+                align-items: end;
+                right: 0;
+                margin-right: 15px;
+                background-color: transparent;
+                border: none;
+
+                &-2{
+                    display: none;
+                }
+            }
+
+            .active1 .header__icons-1{
+                display: none;
+            }
+
+            .active1 .header__icons-2{
+                display: block;
+            }
+        }
+    } 
 }
+

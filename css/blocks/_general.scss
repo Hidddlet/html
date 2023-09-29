@@ -19,6 +19,7 @@ body{
     font-family: $primaryFont;
     color: $secondary;
     letter-spacing: 2px;
+    width: 100%;
 }
 
 .wrap{
@@ -31,8 +32,8 @@ body{
     height: auto;
 }
 
-.block:not(:first-child){
-    padding: 70px 0;
+.block{
+    padding: 70px 0px 70px;
 }
 
 h1{
@@ -116,23 +117,22 @@ p{
 // mobile----------------------------------------------------------------------
 // ----------------------------------------------------------------------------
 
-@media (max-width:375px) {
+@media (max-width:576px) {
 
     body{
         background-color: $primary;
         font-family: $primaryFont;
         color: $secondary;
         letter-spacing: 1px;
-        width: 375px;
     }
 
-    .block:not(:first-child){
-        padding: 40px 0;
+    .block{
+        padding: 40px 16px 40px;
     }    
     
     .wrap{
         margin: 0 auto;
-        max-width: 95%;
+        max-width: 100%;
     }
 
     h1{
