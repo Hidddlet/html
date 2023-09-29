@@ -101,10 +101,14 @@
             .qa__answer {
                 background-color: $primaryLighter;
                 display: none;
-                padding: 0 30px 30px;
+                padding: 0 15px 15px;
                 color: $secondaryDarker;
                 border-radius: 0 0 5px 5px;
                 overflow: hidden;
+
+                p{
+                    font-size: 12px;
+                }
             }
     
             .active, .qa__question:hover {

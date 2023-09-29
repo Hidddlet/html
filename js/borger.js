@@ -9,10 +9,10 @@ for (i = 0; i < acc.length; i++) {
 
     /* Toggle between hiding and showing the active panel */
     var nav__func = this.nextElementSibling;
-    if (nav__func.style.display === "block") {
-        nav__func.style.display = "none";
+    if (nav__func.style.left === "-100%") {
+        nav__func.style.left = "0";
     } else {
-        nav__func.style.display = "block";
+        nav__func.style.left = "-100%";
     }
   });
 }

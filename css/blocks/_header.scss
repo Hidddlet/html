@@ -60,8 +60,13 @@ header{
                 text-align: center;
                 width: 100%;
 
-                h4{
-                    margin-bottom: 16px;
+                a{
+                    text-decoration: none;
+                    color: $secondary;
+                }
+
+                p{
+                    margin-top: 16px;
                 }
             }
 
@@ -72,7 +77,13 @@ header{
 
             &-nav{
                 width: 100%;
-                display: none;
+                position: absolute;
+                transition: all 0.2s ease;
+                background-color: $primary;
+                top: 90px;
+                height: 100vh;
+                z-index: 5;
+                left: -100%;
 
                 &__list{
                     flex-direction: column;
@@ -98,19 +109,21 @@ header{
                 background-color: transparent;
                 border: none;
 
-                &-2{
+                &-1{
                     display: none;
                 }
             }
 
-            .active1 .header__icons-1{
+            .active1 .header__icons-2{
                 display: none;
             }
 
-            .active1 .header__icons-2{
+            .active1 .header__icons-1{
                 display: block;
             }
         }
     } 
+
+
 }
 

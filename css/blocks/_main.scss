@@ -27,6 +27,21 @@
 
     &__img{
         position: relative;
+
+        picture{
+            display: block;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 442px;
+            position: relative;
+
+            source{
+                object-fit: cover;
+                top: 0;
+                left: 0;
+            }
+        }
     }
 
     &__arrow{
@@ -35,6 +50,7 @@
         cursor: pointer;
         margin-right: 20px;
         right: 0;
+        z-index: 3;
 
         &:hover .main__arrow-circle2{
             fill: $accentAlt;

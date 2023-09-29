@@ -204,8 +204,12 @@ header .header-nav__link:hover {
     text-align: center;
     width: 100%;
   }
-  header .header__info h4 {
-    margin-bottom: 16px;
+  header .header__info a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  header .header__info p {
+    margin-top: 16px;
   }
   header .header__logo {
     width: 108px;
@@ -213,7 +217,13 @@ header .header-nav__link:hover {
   }
   header .header-nav {
     width: 100%;
-    display: none;
+    position: absolute;
+    transition: all 0.2s ease;
+    background-color: #1B1B1B;
+    top: 90px;
+    height: 100vh;
+    z-index: 5;
+    left: -100%;
   }
   header .header-nav__list {
     flex-direction: column;
@@ -235,13 +245,13 @@ header .header-nav__link:hover {
     background-color: transparent;
     border: none;
   }
-  header .header__icons-2 {
-    display: none;
-  }
-  header .header .active1 .header__icons-1 {
+  header .header__icons-1 {
     display: none;
   }
   header .header .active1 .header__icons-2 {
+    display: none;
+  }
+  header .header .active1 .header__icons-1 {
     display: block;
   }
 }
@@ -268,12 +278,27 @@ header .header-nav__link:hover {
 .main__img {
   position: relative;
 }
+.main__img picture {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 442px;
+  position: relative;
+}
+.main__img picture source {
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+}
 .main__arrow {
   position: absolute;
   top: -17%;
   cursor: pointer;
   margin-right: 20px;
   right: 0;
+  z-index: 3;
 }
 .main__arrow:hover .main__arrow-circle2 {
   fill: #F47746;
@@ -706,10 +731,13 @@ header .header-nav__link:hover {
   .qa .qa__accordion .qa__answer {
     background-color: #232323;
     display: none;
-    padding: 0 30px 30px;
+    padding: 0 15px 15px;
     color: #CCCCCC;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
+  }
+  .qa .qa__accordion .qa__answer p {
+    font-size: 12px;
   }
   .qa .qa__accordion .active, .qa .qa__accordion .qa__question:hover {
     color: #FA6E37;
