@@ -77,10 +77,10 @@
     }
 }
 
-@media (max-width:576px){
+@media (max-width:1024px){
     
 .footer__container{
-    margin-top: 40px;
+    margin-top: 0px;
     max-height: 300px;
 
     .footer__info{
@@ -120,4 +120,11 @@
     }
 }
 
+}
+
+@media (max-width:576px){
+
+    .footer__container{
+        margin-top: 40px;
+    }
 }

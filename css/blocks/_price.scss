@@ -34,6 +34,25 @@
     
 }
 
+@media (max-width:1024px){
+
+    .price{
+
+        &__wrap{
+            align-items: center;
+        }
+    
+        .price__block{
+            padding: 30px 30px 45px 30px;
+            
+            h4{
+                margin-top: 0px;
+            }
+        }
+        
+    }
+}
+
 @media (max-width:576px){
 
     .price{

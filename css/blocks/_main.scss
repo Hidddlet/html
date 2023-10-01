@@ -69,7 +69,7 @@
     }
 }
 
-@media (max-width:576px){
+@media (max-width:1024px){
 
     .main{
 
@@ -79,13 +79,13 @@
 
         &__desc{
             padding-left: 0px;
-            max-width: 340px;
+            max-width: 900px;
             color: $secondaryDarker;
             padding-bottom: 30px;
         }
 
         &__arrow{
-            top: -10%;
+            top: -8%;
             right: 0;
             margin-right: 40px;
             width: 64px;
@@ -96,5 +96,18 @@
             position: relative;
         }
     
+    }
+}
+
+@media (max-width:576px){
+
+    .main{
+        &__desc{
+            max-width: 340px;
+        }
+        
+        &__arrow{
+            top: -10%;
+        }
     }
 }

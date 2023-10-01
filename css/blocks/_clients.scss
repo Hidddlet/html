@@ -29,7 +29,14 @@ $animationSpeed: 40s;
     }
 }
 
-@media (max-width:576px){
+.swiper-container{
+	
+	button{
+		max-width: 260px;
+	}
+}
+
+@media (max-width:1024px){
 
 	.clients h2{
 		margin-bottom: 40px;
