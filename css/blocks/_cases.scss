@@ -55,6 +55,8 @@
         position: relative;
         height: 507px;
         width: 100%;
+                    border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
 
         img{
             position: absolute;
@@ -109,11 +111,16 @@
     .swiper-slide{
         flex-direction: column-reverse;
 
-        img{
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }    
+        .cases__img{
+            position: relative;
+            height: 270px;
+            width: 100%;
     
+            img{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }    
+        }
         .swiper-container{
 
             h3{
@@ -129,4 +136,13 @@
 }
 
 
+@media (max-width:576px){
+
+    .swiper-slide{
+
+        .cases__img{
+            height: 190px;
+        }
+    }
+}
 
