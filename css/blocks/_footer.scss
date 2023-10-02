@@ -93,8 +93,8 @@
 }
 
 .footer__bottom{
-    flex-direction: column;
     margin-top: 0px;
+    flex-wrap: wrap;
 
     p, a{
         order: 2;
@@ -107,9 +107,13 @@
     }
 
     .footer-nav{
+        width: 100%;
+
         &__list{
             order: 1;
             margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
         }
 
         &__item{

@@ -24,12 +24,17 @@ body{
 
 .wrap{
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1480px;
+    padding: 0px 20px;
 }
 
 .responsive {
     width: 100%;
     height: auto;
+}
+
+.block-hed{
+    padding: 50px 0 50px;
 }
 
 .block{
@@ -117,6 +122,24 @@ p{
 // mobile, tablet----------------------------------------------------------------------
 // ----------------------------------------------------------------------------
 
+@media (max-width:1250px) {
+
+    .block-hed{
+        padding: 20px 0 20px;
+    }
+
+    header{
+
+        .mob{
+            display: block;
+        }
+
+        .web{
+            display: none;
+        }
+    }
+}
+
 @media (max-width:1024px) {
 
     body{
@@ -129,11 +152,75 @@ p{
     .block{
         padding: 40px 16px 40px;
     }    
+
+    
+    .block:last-child{
+        padding: 0px 16px 40px;
+    }    
+    
     
     .wrap{
         margin: 0 auto;
         max-width: 100%;
     }
+
+    h1{
+        font-size: 37px;
+        font-weight: $semiBold;
+        text-transform: uppercase;
+    }
+    
+    h2{
+        font-size: 25px;
+        font-weight: $medium;
+    }
+
+    h3{
+        font-size: 20px;
+        font-weight: $medium;
+    }
+    
+    h4{
+        font-size: 14px;
+        font-weight: $semiBold;
+    }
+    
+    p{
+        font-size: 14px;
+        font-weight: $regular;
+        color: $secondaryDarker;
+    }
+
+    .small{
+        font-size: 12px;
+        font-weight: $regular;
+    }
+    
+    .btn{
+        color: $secondary;
+        background-color: $accent;
+        border: none;
+        border-radius: 5px;
+        font: $medium 17px $primaryFont;
+        padding: 15px 40px;
+        align-items: center;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        letter-spacing: 1px;
+    }
+    
+    .mob{
+        display: block;
+    }
+
+    .web{
+        display: none;
+    }
+}
+
+
+@media (max-width:576px) {
+    
 
     h1{
         font-size: 28px;
@@ -163,28 +250,8 @@ p{
     }
 
     .small{
-        font-size: 7px;
+        font-size: 12px;
         font-weight: $regular;
     }
     
-    .btn{
-        color: $secondary;
-        background-color: $accent;
-        border: none;
-        border-radius: 5px;
-        font: $medium 17px $primaryFont;
-        padding: 15px 40px;
-        align-items: center;
-        text-transform: uppercase;
-        transition: all 0.2s ease;
-        letter-spacing: 1px;
-    }
-    
-    .mob{
-        display: block;
-    }
-
-    .web{
-        display: none;
-    }
 }
