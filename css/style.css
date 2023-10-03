@@ -125,7 +125,7 @@ p {
     letter-spacing: 1px;
   }
   .block {
-    padding: 40px 16px 40px;
+    padding: 0px 16px 0px;
   }
   .block:last-child {
     padding: 0px 16px 40px;
@@ -346,7 +346,7 @@ header .header-nav a {
   height: 442px;
   position: relative;
 }
-.main__img picture source {
+.main__img picture * {
   position: absolute;
   width: 100%;
   height: 100%;
